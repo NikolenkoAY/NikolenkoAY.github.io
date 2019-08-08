@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {  
+  font-family: 'PT Serif', serif;
+  background-color: #f1f1f1;
+  font-size: 18px;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "aside header ."
+    "aside main ."
+    "aside footer .";
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-columns: 35% 740px  1fr;
+  grid-gap: 3%;
+  height: 100vh;
+  margin: 0;
+}
+
+#header{
+  grid-area: header;
+}
+
+#aside{
+  grid-area: aside;
+}
+
+#main{
+  grid-area: main;
+}
+
+#footer{
+  grid-area: footer;
+}
+
+aside{
+  width: auto;
+  height: auto;
+  background-color: #333
+}
+.aside{
+  background-image: url(./img/ssh-keys.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;  
+}
+.aside-img{
+  height: 100%;
+  background:   linear-gradient(180deg, transparent, rgba(0,0,0,0.75)) repeat scroll 0% 0% transparent;
+}
+
+.header-nav {
+  height: 50px;
+  border-bottom: 1px solid #626262;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-nav-link {
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 20px;
+}
+
+
+
+
+.article-preview, .article{  
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-preview-title, .article-title {
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-decoration: none;
+  color: #000;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 26px
+}
+
+.article-preview::after {
+  content: "***";
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+  padding: 15px 0
+}
+
+footer{
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-top: 1px solid #626262;
+  color: #333;
+  font-size: 13px
+}
+
+
