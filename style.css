@@ -110,3 +110,40 @@ footer{
 }
 
 
+
+
+@media (max-width: 600px) {
+
+  html {  
+    
+    font-size: 14px;
+  }
+  aside{
+    display: none;
+  }
+
+
+body {
+  display: grid;
+  grid-template-areas:
+    ". header ."
+    ". main ."
+    ". footer .";
+  grid-template-rows: 20px 1fr 20px;
+  grid-template-columns: 0px  1fr  0px;
+  grid-gap: 5px;
+  height: 100vh;
+  margin: 0;
+}
+  footer{
+    height: 30px;
+    font-size: 12px
+  }
+  .header-nav{
+    height: 30px;
+    
+  }
+  .header-nav-link{
+    font-size: 12px;
+  }
+}
